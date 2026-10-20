@@ -1,10 +1,10 @@
 {
-  "geode": "v5.11.2",
+  "geode": "5.11.2",
   "gd": { "win": "2.2081" },
   "id": "local.wave-memory-assist",
   "name": "Wave Memory Assist",
   "version": "v1.0.0",
-  "developer": "Private GDPS Project",
+  "developer": "GlurrooGD",
   "description": "Record your own wave inputs, then queue early presses/releases and execute only when the saved timing matches. No noclip, no autoplay.",
   "settings": {
     "heading": { "type": "title", "name": "Wave Memory Assist" },
