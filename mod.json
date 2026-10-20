@@ -1,0 +1,28 @@
+{
+  "geode": "v5.11.2",
+  "gd": { "win": "2.2081" },
+  "id": "local.wave-memory-assist",
+  "name": "Wave Memory Assist",
+  "version": "v1.0.0",
+  "developer": "Private GDPS Project",
+  "description": "Record your own wave inputs, then queue early presses/releases and execute only when the saved timing matches. No noclip, no autoplay.",
+  "settings": {
+    "heading": { "type": "title", "name": "Wave Memory Assist" },
+    "enabled": { "type": "bool", "name": "Enable mod", "default": true },
+    "record-next": {
+      "type": "bool", "name": "Record next run (100% required)",
+      "description": "Turn on, restart the level and beat it normally. A completed run overwrites the current level reference. After success this toggle switches itself off.",
+      "default": false
+    },
+    "early-frames": {
+      "type": "int", "name": "Early window (physics frames)",
+      "description": "0 = exact timing, 20 = your PRESS and RELEASE may happen up to 20 simulation ticks before the saved event. Out-of-window input is discarded, never noclipped.",
+      "default": 20, "min": 0, "max": 120,
+      "control": { "slider": true, "arrows": true, "input": true }
+    },
+    "p1": { "type": "bool", "name": "Enable player 1", "default": true },
+    "p2": { "type": "bool", "name": "Enable player 2", "default": true },
+    "header2": { "type": "title", "name": "Overlay" },
+    "overlay": { "type": "bool", "name": "Show REC / ASSIST status", "default": true }
+  }
+}
