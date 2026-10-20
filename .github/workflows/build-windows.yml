@@ -1,0 +1,22 @@
+name: Build Wave Memory Assist (Windows)
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build for Windows / GD 2.2081
+        id: geode
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          sdk: given
+          target: Win64
+          build-config: Release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WaveMemoryAssist-Windows
+          path: ${{ steps.geode.outputs.build-output }}/*.geode
+          if-no-files-found: error
